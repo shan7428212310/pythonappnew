@@ -1,0 +1,13 @@
+FROM python:3.10
+
+# Install Azure SDK packages
+RUN pip install azure-storage-blob
+
+# Copy your application code
+COPY . /app
+
+# Set the working directory
+WORKDIR /app
+
+# Run your application
+CMD ["python", "TextSearch.py"]
